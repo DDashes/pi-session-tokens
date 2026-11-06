@@ -21,25 +21,29 @@ Only the session total uses the theme's normal foreground; labels, the branch to
 
 ## Install
 
+Install the latest stable release:
+
 ```bash
-pi install npm:pi-session-tokens
+pi install git:github.com/DDashes/pi-session-tokens@v0.1.0
 ```
 
-From git:
+To follow future releases, omit the tag (updates track the `main` branch):
 
 ```bash
 pi install git:github.com/DDashes/pi-session-tokens
 ```
 
-Try it without installing anything:
+Try it without adding it to your settings:
 
 ```bash
-pi -e npm:pi-session-tokens
+pi -e git:github.com/DDashes/pi-session-tokens@v0.1.0
 ```
 
 Then run `/reload` if Pi is already open. **Load it only once** — a global entry, a `-e` flag and an installed package at the same time will all write the same footer key and each append their own turn records.
 
-Requires Pi 1.5.0 or newer. Nothing to configure.
+Requires Pi 1.5.0 or newer. Nothing to configure. Distributed from GitHub; an npm release is planned for later.
+
+Uninstall with `pi remove git:github.com/DDashes/pi-session-tokens` (use the same `@v0.1.0` suffix if you installed the pinned version).
 
 ## Counting rules
 
