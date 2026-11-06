@@ -1,0 +1,45 @@
+{
+  "name": "pi-session-tokens",
+  "version": "0.1.0",
+  "description": "Pi extension: session-wide token totals across every branch, live per-turn elapsed time, and a per-turn usage summary with graded colors.",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "tokens",
+    "usage",
+    "statusline",
+    "observability"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "author": "DDashes <2459078013@qq.com>",
+  "homepage": "https://github.com/DDashes/pi-session-tokens#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DDashes/pi-session-tokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DDashes/pi-session-tokens/issues"
+  },
+  "files": [
+    "index.ts",
+    "stats.ts",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "test"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "scripts": {
+    "test": "node --test test/stats.test.mjs && node test/integration-test.mjs && node test/reload-test.mjs && node test/pack-test.mjs",
+    "prepublishOnly": "npm test"
+  }
+}
